@@ -1,0 +1,22 @@
+{
+   "data": [
+      {
+         "temp": "21+",
+         "weather": "N/A",
+         "outfit": "T-Shirt,Shorts",
+         "id": 337988746941929238
+      },
+      {
+         "temp": "!20-8",
+         "weather": "N/A",
+         "outfit": "Winter Coat,Pants with under",
+         "id": 274497067469845124
+      },
+      {
+         "temp": "23.08000000000004",
+         "weather": "overcast clouds",
+         "outfit": "",
+         "id": 285807269685985999
+      }
+   ]
+}

@@ -1,0 +1,76 @@
+{
+   "data": [
+      {
+         "temp": "21+",
+         "weather": "NA",
+         "cloth": "T-Shirt",
+         "id": 843725626493309641
+      },
+      {
+         "temp": "21+",
+         "weather": "NA",
+         "cloth": "Shorts",
+         "id": 480035182310764832
+      },
+      {
+         "temp": "NA",
+         "weather": "Rain,Thunderstorm",
+         "cloth": "Rain Coat",
+         "id": 953575866020188049
+      },
+      {
+         "temp": "16+",
+         "weather": "NA",
+         "cloth": "Dress shirt",
+         "id": 223880667699104729
+      },
+      {
+         "temp": "16+",
+         "weather": "NA",
+         "cloth": "Khakis",
+         "id": 108001493385123605
+      },
+      {
+         "temp": "12-18",
+         "weather": "NA",
+         "cloth": "Sweater",
+         "id": 149754508808360342
+      },
+      {
+         "temp": "12+",
+         "weather": "NA",
+         "cloth": "Sweat pants",
+         "id": 124878553825238814
+      },
+      {
+         "temp": "8-21",
+         "weather": "NA",
+         "cloth": "Jeans",
+         "id": 264781084331862987
+      },
+      {
+         "temp": "8-12",
+         "weather": "NA",
+         "cloth": "Jacket",
+         "id": 632619912085459258
+      },
+      {
+         "temp": "!20-8",
+         "weather": "NA",
+         "cloth": "Winter Coat",
+         "id": 177394399564550334
+      },
+      {
+         "temp": "!20-8",
+         "weather": "NA",
+         "cloth": "Pants with under",
+         "id": 809269961842739779
+      },
+      {
+         "temp": "!20-8",
+         "weather": "Snow",
+         "cloth": "boots",
+         "id": 185811408405313810
+      }
+   ]
+}
