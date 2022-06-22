@@ -28,7 +28,6 @@ def weather(city_name):
         current_humidity = y["humidity"]
         z = x["weather"]
         weather_description = z[0]["description"]
-        # if high humidity add 5 degrees to temp
         print(" Temperature (in celcius unit) = " +
                         str(current_temperature) +
             "\n atmospheric pressure (in hPa unit) = " +
