@@ -1,7 +1,8 @@
 import { BaseItem, Item } from "./item.interface";
 import { Items } from "./items.interface";
+import { Vote } from "./vote.interface";
 
-
+let voters: Array<string> = [];
 let items: Items = {
     1: {
       id: 1,
@@ -81,4 +82,17 @@ export const create = async (newItem: BaseItem): Promise<Item> => {
     }
   
     delete items[id];
+  };
+
+  export const findOption = async (id: number, ): Promise<Item> => items[id];
+
+  export const vote = async(vote: Vote): Promise<null | void> => {
+    const item = await find(vote.id);
+    if (!item) {
+        return null;
+    }
+
+    item.options[vote.option].votes++;
+    voters.push(vote.name);
+    return null;
   };

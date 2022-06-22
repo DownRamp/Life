@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import * as ItemService from "./items.service";
 import { BaseItem, Item } from "./item.interface";
+import { Vote } from "./vote.interface";
 
 export const itemsRouter = express.Router();
 
@@ -46,6 +47,18 @@ itemsRouter.get("/", async (req: Request, res: Response) => {
     }
   });
   
+  // Vote
+  itemsRouter.post("/enter", async (req: Request, res: Response) => {
+    try {
+      const vote: Vote = req.body;
+  
+      await ItemService.vote(vote);
+      res.status(200).send("SUCCESS");
+    } catch (e) {
+      res.status(500).send(e.message);
+    }
+  });
+
   // PUT items/:id
   
   itemsRouter.put("/:id", async (req: Request, res: Response) => {
@@ -75,7 +88,7 @@ itemsRouter.get("/", async (req: Request, res: Response) => {
     try {
       const id: number = parseInt(req.params.id, 10);
       await ItemService.remove(id);
-  
+    
       res.sendStatus(204);
     } catch (e) {
       res.status(500).send(e.message);
