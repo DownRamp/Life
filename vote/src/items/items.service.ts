@@ -87,12 +87,28 @@ export const create = async (newItem: BaseItem): Promise<Item> => {
   export const findOption = async (id: number, ): Promise<Item> => items[id];
 
   export const vote = async(vote: Vote): Promise<null | void> => {
+    // check if time is within boundaries
+    let dateTime = new Date();
+
     const item = await find(vote.id);
     if (!item) {
         return null;
     }
 
-    item.options[vote.option].votes++;
-    voters.push(vote.name);
+    if(item.end != null && item.start != null) {
+        if(item.end >= dateTime && item.start <= dateTime){
+            if(voters.indexOf(vote.name) > -1){
+                item.options[vote.option].votes++;
+                voters.push(vote.name);
+            }
+        }
+    }
+    else {
+        // only count original votes can be replaced with id
+        if(voters.indexOf(vote.name) > -1){
+            item.options[vote.option].votes++;
+            voters.push(vote.name);
+        }
+    }
     return null;
   };

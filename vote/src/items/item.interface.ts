@@ -7,6 +7,8 @@ export interface BaseItem {
     options: VoteItems;
     description: string;
     image: string;
+    start?: Date;
+    end?: Date;
 }
   
 export interface Item extends BaseItem {
