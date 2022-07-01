@@ -7,4 +7,6 @@
 # pull up previous days
 
 # Analyse most used words?
+
 # Sentiment analyzer?
+

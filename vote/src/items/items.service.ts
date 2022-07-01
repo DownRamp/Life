@@ -84,7 +84,7 @@ export const create = async (newItem: BaseItem): Promise<Item> => {
     delete items[id];
   };
 
-  export const findOption = async (id: number, ): Promise<Item> => items[id];
+#  export const findOption = async (id: number, ): Promise<Item> => items[id];
 
   export const vote = async(vote: Vote): Promise<null | void> => {
     // check if time is within boundaries
@@ -97,7 +97,7 @@ export const create = async (newItem: BaseItem): Promise<Item> => {
 
     if(item.end != null && item.start != null) {
         if(item.end >= dateTime && item.start <= dateTime){
-            if(voters.indexOf(vote.name) > -1){
+            if(voters.indexOf(vote.name) == -1){
                 item.options[vote.option].votes++;
                 voters.push(vote.name);
             }
@@ -105,7 +105,7 @@ export const create = async (newItem: BaseItem): Promise<Item> => {
     }
     else {
         // only count original votes can be replaced with id
-        if(voters.indexOf(vote.name) > -1){
+        if(voters.indexOf(vote.name) == -1){
             item.options[vote.option].votes++;
             voters.push(vote.name);
         }

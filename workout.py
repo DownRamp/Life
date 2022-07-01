@@ -139,8 +139,6 @@ def video(source, signals, section):
             # Resuming the music
             # Loading the song
             mixer.music.load(source)
-            #
-            # # Setting the volume
             mixer.music.set_volume(0.7)
             #
             # # Start playing the song
@@ -215,12 +213,11 @@ if __name__ == "__main__":
     voices = engine.getProperty('voices')
 
     # change to 0 for male voice. I like this one more (turn to 7 on macs)
-    engine.setProperty('voice', voices[1].id)
-    # engine.setProperty('voice', voices[7].id)
+    #engine.setProperty('voice', voices[1].id)
+    engine.setProperty('voice', voices[7].id)
 
     engine.say(f"Hello {username} lets have a great workout")
     engine.runAndWait()
     fetch_workout()
     workout(username, engine)
     engine.stop()
-
