@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "d6f99ae8-445a-43dc-8920-e9693e736902",
+		"name": "Vote",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21043585"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7010/api/vote/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7010",
+					"path": [
+						"api",
+						"vote",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a vote thingy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7010/api/vote/items/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7010",
+					"path": [
+						"api",
+						"vote",
+						"items",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Vote option",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Salad\",\n  \"votes\": 499,\n  \"description\": \"Fresh\",\n  \"image\": \"https://images.ctfassets.net/23aumh6u8s0i/5pnNAeu0kev0P5Neh9W0jj/5b62440be149d0c1a9cb84a255662205/whatabyte_salad-sm.png\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7010/api/vote/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7010",
+					"path": [
+						"api",
+						"vote",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a vote",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Spicy Pizza\",\n  \"votes\": 599,\n  \"description\": \"Blazing Good\",\n  \"image\": \"https://images.ctfassets.net/23aumh6u8s0i/2x1D2KeepKoZlsUq0SEsOu/bee61947ed648848e99c71ce22563849/whatabyte_pizza-sm.png\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7010/api/vote/items/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7010",
+					"path": [
+						"api",
+						"vote",
+						"items",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete vote option",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7010/api/vote/items/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7010",
+					"path": [
+						"api",
+						"vote",
+						"items",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Daniels\",\n    \"option\":1,\n    \"id\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7010/api/vote/items/enter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7010",
+					"path": [
+						"api",
+						"vote",
+						"items",
+						"enter"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
